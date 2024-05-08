@@ -3,7 +3,7 @@ mat = [[0 for _ in range(m)] for _ in range(n)]
 num = 1
 cnt = 0
 
-while True:
+while mat[-1][-1] == 0:
     for i in range(cnt+1):
         try:
             mat[i][cnt-i] = num
@@ -11,8 +11,6 @@ while True:
         except: 
             continue
     cnt += 1
-    if mat[-1][-1] != 0: 
-        break
 
 for row in mat:
     print(*row)
